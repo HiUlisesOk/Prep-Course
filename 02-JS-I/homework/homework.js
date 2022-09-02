@@ -4,7 +4,7 @@
 const nuevaString = "Hola Mundo";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = "100";
+const nuevoNum = 100;
 
 // Crea una variable booleana:
 const nuevoBool = true;
@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4.2;
+const nuevoModulo = 21 % 5 === true;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -60,7 +60,7 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (x == y) {
+  if (x === y) {
 return true;
   }
 }
@@ -69,7 +69,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.length == str2.length){
+  if (str1.length === str2.length){
     return true;
   }
   else{
@@ -112,7 +112,7 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var resto = num % 2;
-  if (resto == 0)
+  if (resto === 0)
   {
     return true;
   }
@@ -180,7 +180,7 @@ function esPositivo(numero) {
   }
   else if(numero < 0) {
 return "Es negativo";
-  } else if (numero == 0){
+  } else if (numero === 0){
     return false;
   }
 }
@@ -244,15 +244,15 @@ function esVocal(letra){
   
   if (letra.length < 1){
     return "Dato incorrecto";
-  } else if (letra == "a"){
+  } else if (letra === "a"){
     return "Es vocal";
-  } else if (letra == "e"){
+  } else if (letra === "e"){
     return "Es vocal";
-  } else if (letra == "i"){
+  } else if (letra === "i"){
     return "Es vocal";
-  } else if (letra == "o"){
+  } else if (letra === "o"){
     return "Es vocal";
-  } else if (letra == "u"){
+  } else if (letra === "u"){
     return "Es vocal";
   } else {
     return "Dato incorrecto";
