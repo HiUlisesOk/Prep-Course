@@ -41,7 +41,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y - x;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -114,7 +114,8 @@ function esPar(num) {
   if (num % 2 == 0)
   {
     return true;
-  } else {
+  }
+  else {
     return false;
   }
 }
@@ -135,19 +136,21 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num.Math.Pow(2);
+  return num.Math.pow(2);
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num.Math.Pow(3);
+  return num.Math.pow(3);
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return num.Math.Pow(exponent);
+  a = num;
+  b = exponent;
+  return a.Math.pow(b);
 }
 
 function redondearNumero(num) {
@@ -207,7 +210,7 @@ function obtenerSaludo(nombre) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  return altura * ancho;
+  return alto * ancho;
 }
 
 
