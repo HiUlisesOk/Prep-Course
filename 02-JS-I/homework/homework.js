@@ -111,7 +111,8 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 == 0)
+  var resto = num % 2;
+  if (resto == 0)
   {
     return true;
   }
@@ -136,21 +137,19 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num.Math.pow(2);
+  return Math.pow(num,2);
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num.Math.pow(3);
+  return Math.pow(num,3);
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  a = num;
-  b = exponent;
-  return a.Math.pow(b);
+  return Math.pow(num, exponent);
 }
 
 function redondearNumero(num) {
@@ -243,6 +242,21 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
+  if (letra.length < 1){
+    return "Dato incorrecto";
+  } else if (letra == "a"){
+    return "Es vocal";
+  } else if (letra == "e"){
+    return "Es vocal";
+  } else if (letra == "i"){
+    return "Es vocal";
+  } else if (letra == "o"){
+    return "Es vocal";
+  } else if (letra == "u"){
+    return "Es vocal";
+  } else {
+    return "Dato incorrecto";
+  }
 }
 
 
