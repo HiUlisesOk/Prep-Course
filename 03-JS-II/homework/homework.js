@@ -173,7 +173,7 @@ function operadoresLogicos(num1, num2, num3) {
   }
 }
 
-function esPrimo(numero) {
+/*function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -191,7 +191,7 @@ for (let i = 1; i < numero; i++ ){
   }
 
 }
-
+*/
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
