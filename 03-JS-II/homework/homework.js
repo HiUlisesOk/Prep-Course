@@ -173,13 +173,13 @@ function operadoresLogicos(num1, num2, num3) {
   }
 }
 
-/*function esPrimo(numero) {
+function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-for (let i = 1; i < numero; i++ ){
+/*for (let i = 1; i < numero; i++ ){
   var divpori = numero % i;
   var divpornum = numero % numero;
  if (numero < 2 && divpori != 0){
@@ -189,9 +189,9 @@ for (let i = 1; i < numero; i++ ){
   }else {
     return true;
   }
-
-}
 */
+}
+
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
