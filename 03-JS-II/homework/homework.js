@@ -67,20 +67,53 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color){
+    case "blue":
+    
+      return "This is blue"; 
+      break
+    
+    case "red":
+    return "This is red";
+      break;
+
+    case "green":
+    return "This is green";
+      break;
+
+    case "orange":
+    return "This is orange";
+      break;
+
+    default:
+      return "Color not found";
+      break;
+  } 
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero === 10 || numero === 5){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero < 50 && numero > 20){
+    return true;
+  } else {
+    return false;
+  }
 }
 
+document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
@@ -89,13 +122,29 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  var entero = Math.floor(numero);
+if (numero === entero){
+  return true;
+} else{
+  return false;
 }
+}
+
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero % 3 === 0 && numero % 5 != 0){
+    return "fizz";
+  } else if(numero % 5 === 0 && numero % 3 != 0){
+return "buzz";
+  } else if (numero % 3 === 0 && numero % 5 === 0){
+return "fizzbuzz";
+  } else{
+    return numero;
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -105,6 +154,23 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  if (num1 > num2 && num1 > num3){
+    if (num1 > 0){
+      return "Número 1 es mayor y positivo";
+    }
+  }
+  if (num1 < 0 || num2 < 0 || num3 <0){
+      return "Hay negativos";
+  }
+  if (num3 > num1 && num3 > num2){
+    num3++;
+      return num3;
+  }
+  if (num1 === 0 || num2 === 0 || num3 === 0){
+      return "Error";
+  } else { 
+      return false;
+  }
 }
 
 function esPrimo(numero) {
@@ -113,6 +179,17 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+for (let i = 1; i < numero; i++ ){
+  var divpori = numero % i;
+  var divpornum = numero % numero;
+ if (numero < 2 && divpori != 0){
+  return false;
+ } else if (divpori != 0 && divpornum != 0){
+    return false;
+  }else {
+    return true;
+  }
+
 }
 
 function esVerdadero(valor){
@@ -161,4 +238,4 @@ module.exports = {
   tablaDelSeis,
   tieneTresDigitos,
   doWhile
-};
+}
