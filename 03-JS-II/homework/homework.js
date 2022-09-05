@@ -113,7 +113,7 @@ function estaEnRango(numero) {
   }
 }
 
-document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
+
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
@@ -238,4 +238,4 @@ module.exports = {
   tablaDelSeis,
   tieneTresDigitos,
   doWhile
-}
+};
