@@ -179,19 +179,18 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-/*for (let i = 1; i < numero; i++ ){
+for (let i = 1; i < numero; i++ ){
   var divpori = numero % i;
   var divpornum = numero % numero;
  if (numero < 2 && divpori != 0){
   return false;
  } else if (divpori != 0 && divpornum != 0){
     return false;
-  }else {
-    return true;
-  }
-*/
+    }  else if (divpori === divpornum) {
+      return true;
+    }
 }
-
+}
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
