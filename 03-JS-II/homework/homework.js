@@ -247,7 +247,7 @@ function doWhile(numero) {
     console.log( numero + ' ' + i )
     	i++;
     if (i === 8){
-      return numero + 5;
+      return numero;
     }
   } while(i != 8);
 }
