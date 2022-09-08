@@ -121,13 +121,14 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-    var acum = 0;
-  for (i = 0; i < numeros.length; i++){
-    if (numeros[i] > acum){
-      var acum = numeros[i];
-    }
+  var acum = arguments[0];
+  if (arguments.length === 0){
+    return 0;
   }
-  return acum;
+for (i = 1; i < arguments.length; i++){
+var acum = acum * arguments[i];
+}
+return acum;
 }
 
 
@@ -149,9 +150,9 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  if (numeroDeDia === 1 || numeroDeDia === 6){
+  if (numeroDeDia === 1 || numeroDeDia === 7){
     return "Es fin de semana";
-  } else if (numeroDeDia < 6 || numeroDeDia > 1){
+  } else if (numeroDeDia < 7 || numeroDeDia > 1){
     return "Es dia Laboral";
   }
 } 
@@ -192,19 +193,25 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var cont = 0;
   var arrayN = [];
   for (i = 0; i < array.length; i++){
-    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
-      arrayN.push(array[i]);
-      if (arrayN.length === 3){
-            return arrayN;
-      } else {
-            var resultado = "No se encontraron los meses pedidos";
+    if (array[i] === "Enero"){
+      var cont = cont + 1;
+      arrayN.push(array[i])
     }
-
-    } 
-    
+    if (array[i] === "Marzo"){
+       var cont = cont + 1;
+      arrayN.push(array[i])
+    }
+    if (array[i] === "Noviembre"){
+       var cont = cont + 1;
+      arrayN.push(array[i])
+    }
   }
+if (cont < 3 || arrayN.length < 3 ){
+  return "No se encontraron los meses pedidos";
+} else {return arrayN;}
 }
 
 
@@ -256,12 +263,11 @@ function continueStatement(numero) {
   var acum = numero;
 var arrayN = [];
 var i = 0; 
-while (i < 10){
+while (i < 9){
         var acum = acum + 2;
       arrayN.push(acum);
   i++;
       if (i === 5){
-         var acum = acum - 2;
     continue;
       }
        
