@@ -220,7 +220,7 @@ function mayorACien(array) {
   }
   return arrayN;
 }
-}
+
 
 
 function breakStatement(numero) {
