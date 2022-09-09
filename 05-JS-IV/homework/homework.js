@@ -130,7 +130,7 @@ function sumarLikesDeUsuario (usuario) {
   // Tu código:
   acum = 0;
   for (i = 0; i < usuario.posts.length;i++){
-   var acum = acum + posts.post[i].likes; 
+   var acum = acum + usuario.posts[i].likes; 
   }
     return acum;
   }
