@@ -65,7 +65,7 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario.email === undefined ){
+  if (usuario.email === undefined || usuario.email === null){
     return false;
   } else {return true;}
 }
@@ -128,19 +128,13 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
-acum = 0;
-  for (let clave in usuario){
-if (clave === usuario.posts){
- for (i = 0; i < posts.length;i++){
-  for (let clave in post){
-if (clave === post.likes){
-  acum = acum + post.likes;
-}
+  acum = 0;
+  for (i = 0; i < usuario.posts.length;i++){
+   var acum = acum + post[i].likes; 
   }
- } 
-}
+    return acum;
   }
-}
+
 
 function agregarMetodoCalculoDescuento (producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
