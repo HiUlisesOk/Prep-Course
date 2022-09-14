@@ -25,7 +25,7 @@ function agregarMetodoPrototype(Constructor) {
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
    Constructor.prototype.saludar = function (){
-   return "Hello World";
+   return "Hello World!";
  }
 
 }
@@ -37,10 +37,14 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
   String.prototype.reverse = function (){
-    var separarCadena = this.split("");
-    var invertirArreglo = this.reverse ();
-    var unirArreglo = this.join();
-     return unirArreglo;
+  for (let i = this.length -1; i > 0;i--){
+    var acum = "";
+  for (let i = this.length; i >= 0;i--){
+  var reversa = this.charAt(i);  
+ var acum = acum + reversa; 
+  }
+    return acum;
+  }
 }
 }
 
@@ -73,7 +77,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
-  var juan = new Persona("Juan", "Perez", 22, "Saavedra 123");
+  var juan = new Persona("Juan", "Perez", "22 años", "Saavedra 123");
   return juan;
 }
   
