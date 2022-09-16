@@ -26,18 +26,20 @@ function operacionMatematica(n1, n2, cb) {
   return cb(n1,n2);
 }
 
-  function sumarArray(numeros, cb) {
-    // Suma todos los números enteros (int/integers) de un array ("numeros")
-    // Pasa el resultado a `cb`
-    // No es necesario devolver nada
-    //Tu código:
-    numeros.forEach(function(index,elemento){
-    	var acum = elemento;
-     var acum = elemento + acum; 
-           console.log(acum)
-   })
-      		var cb = acum; 
+function sumarArray(numeros, cb) {
+  // Suma todos los números enteros (int/integers) de un array ("numeros")
+  // Pasa el resultado a `cb`
+  // No es necesario devolver nada
+  //Tu código:
+  function suma(n1,n2){
+   return n1 + n2;
   }
+  var acum = 0;
+  for (i = 0; i < numeros.length; i++){
+   var acum = suma(numeros[i] , acum)
+  }
+cb(acum)
+}
 
 
 function forEach(array, cb) {
