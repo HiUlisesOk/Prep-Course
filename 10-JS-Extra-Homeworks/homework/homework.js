@@ -14,8 +14,8 @@ function deObjetoAmatriz(objeto){
   for (const property in objeto){
     var arrayN2 = [property, objeto[property]];
     arrayN.push(arrayN2)
-    console.log(arrayN)
   }
+  return arrayN;
 }
 
 
