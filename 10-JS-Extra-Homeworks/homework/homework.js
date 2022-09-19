@@ -24,7 +24,17 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  const obj = {};
+
+for (i = 0; i < string.length; i++){
+  if (!obj[string.charAt(i)]){
+ obj[string.charAt(i)] = 0;
+  }
+ obj[string.charAt(i)] += 1;
 }
+  return obj;
+}
+
 
 
 function capToFront(s) {
@@ -32,6 +42,15 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+ var esMay = "";
+ var esMin = "";
+  for (i = 0; i < s.length;i++){
+    if (s[i].toUpperCase() === s[i]){
+var esMay = esMay + s[i];
+    } else {var esMin = esMin + s[i];}
+   
+  }
+      return esMay + esMin;
 }
 
 
@@ -41,6 +60,16 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var acum = str.split(" ");
+  var acum2 = "";
+  for (i = 0; i < acum.length; i++){
+   for (x = acum[i].length -1 ; x >= 0; x--){
+   var acum2 = acum2 + acum[i][x];
+  }
+    acum2 = acum2 + " ";
+}
+return acum2;
+}
 } 
 
 
@@ -49,6 +78,20 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var numero = "" + numero + "";
+var num1 = Array.from(numero);
+var num2 = [];
+  	for (i = numero.length -1; i >= 0;i--){
+	num2.push(numero[i])
+    }
+  var num1 = "" + num1 + "";
+  var num2 = "" + num2 + "";
+  if (num1 === num2){
+    return "Es capicua";
+  } else{
+    return "No es capicua";
+  }
+}
 }
 
 
@@ -56,7 +99,23 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var cadena = cadena.toLowerCase()
+  var cadena = Array.from(cadena);
+  var cadenaN = [];
+  
+  for (i = 0; i < cadena.length; i++){
+    
+    let cad = cadena[i];
+    
+			if (cad != "a" && cad != "b" && cad != "c" ){
+  
+  		var cadenaN = cadenaN + cadena[i]
+  
+		 }
+  }
+  return cadenaN;
 }
+
 
 
 function sortArray(arr) {
