@@ -70,7 +70,7 @@ function asAmirror(str) {
 }
 return acum2;
 }
-} 
+
 
 
 function capicua(numero){
