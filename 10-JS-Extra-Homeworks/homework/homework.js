@@ -92,7 +92,7 @@ var num2 = [];
     return "No es capicua";
   }
 }
-}
+
 
 
 function deleteAbc(cadena){
