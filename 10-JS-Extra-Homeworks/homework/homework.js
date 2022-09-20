@@ -66,7 +66,9 @@ function asAmirror(str) {
    for (x = acum[i].length -1 ; x >= 0; x--){
    var acum2 = acum2 + acum[i][x];
   }
+  if (i < acum.length -1){
     acum2 = acum2 + " ";
+  } 
 }
 return acum2;
 }
@@ -113,7 +115,7 @@ function deleteAbc(cadena){
   
 		 }
   }
-  return cadenaN;
+  return "" + cadenaN + "";
 }
 
 
