@@ -39,6 +39,7 @@ function sumarArray(numeros, cb) {
    var acum = suma(numeros[i] , acum)
   }
 cb(acum)
+/*const total = numeros.reduce((acum,n) => acum + n, 0)*/ 
 }
 
 
@@ -54,21 +55,25 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var arrayN = array.map(cb);
-  return arrayN;
+  //var arrayN = array.map(cb);
+  //return arrayN;
+  array.map( v => cb())
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-    let passed = [];
+  /*  let passed = [];
  array.map(function(element){
     if (element.charAt(0) === "a" ) {
         passed.push(element);
       }
  })
-    return passed;
+    return passed;  */
+
+    var result = array.filter(elemento => elemento.charAt(0) === "a");
+    return result;
 }
 
 // No modificar nada debajo de esta línea

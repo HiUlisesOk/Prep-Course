@@ -135,13 +135,13 @@ return acum;
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var acum = 0;
-  for (i = 0; i < arreglo.length; i++){
-    if (arreglo[i] > 18){
-      var acum = acum + 1;
-    }
-  }
-return acum;
+  var cont = 0;
+  var elemM18 = arreglo.forEach(valor => {
+      if (valor > 18){
+          cont += 1;
+      }
+  }); 
+return elemM18;
 }
 
 
